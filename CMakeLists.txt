@@ -13,7 +13,7 @@ target_sources(base64 PRIVATE
     lib/codec_choose.c
     lib/tables/tables.c
 )
-target_include_directories(base64 PUBLIC .)
+target_include_directories(base64 PUBLIC include)
 target_compile_options(base64 PRIVATE
     $<$<CXX_COMPILER_ID:MSVC>:/arch:AVX2>
     $<$<OR:$<CXX_COMPILER_ID:Clang>,$<CXX_COMPILER_ID:AppleClang>,$<CXX_COMPILER_ID:GNU>>:-mavx2>
